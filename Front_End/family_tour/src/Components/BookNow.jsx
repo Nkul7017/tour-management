@@ -28,7 +28,7 @@ const BookNow = () => {
     const name=rt==="d"?"Destination":"Packages"
   const check=async()=>{
     try{
-const res=await fetch("http://localhost:5000/booknow",{
+const res=await fetch("https://tour-management-system-0qjl.onrender.com/booknow",{
   method:"GET",
   headers:{
     Accept:"application/json",
@@ -53,7 +53,7 @@ setDatas1(data);}
     async function get()
     {
         try{
-        const {data}=await axios.get(`http://localhost:5000/${name}/${_id}`);
+        const {data}=await axios.get(`https://tour-management-system-0qjl.onrender.com/${name}/${_id}`);
       setDatas(data);}
       catch(e)
       {
@@ -90,7 +90,7 @@ setDatas1(data);}
     {
         
         setMSg("")
-        const res=await axios.post("http://localhost:5000/orders",{amount:price})
+        const res=await axios.post("https://tour-management-system-0qjl.onrender.com/orders",{amount:price})
         console.log(res);
         const { orderId, razorpayKeyId } = res.data;
     const options = {
@@ -104,7 +104,7 @@ setDatas1(data);}
       try {
         const { razorpay_payment_id, razorpay_order_id } = response;
         // Verify the payment on the server
-        const verificationResponse = await axios.post("http://localhost:5000/verify", {
+        const verificationResponse = await axios.post("https://tour-management-system-0qjl.onrender.com/verify", {
           paymentId: razorpay_payment_id,
           orderId: razorpay_order_id,_id:_id,
           tour_name:datas.place_name||datas.package_name,

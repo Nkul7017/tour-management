@@ -12,7 +12,7 @@ const Packages = () => {
   const [datas,setDatas]=useState([]);
   const get=async()=>{
     try{
-   const {data}=await axios.get("http://localhost:5000/Packages")
+   const {data}=await axios.get("https://tour-management-system-0qjl.onrender.com/Packages")
    console.log(data);
    setDatas(data);
   }

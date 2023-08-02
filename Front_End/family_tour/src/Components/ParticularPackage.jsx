@@ -30,7 +30,7 @@ const ParticularPackage = () => {
   const { _id } = useParams();
   const get = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/Packages/${_id}`);
+      const response = await axios.get(`https://tour-management-system-0qjl.onrender.com/Packages/${_id}`);
       console.log(response.data);
       setDatas([response.data]);
     } catch (error) {

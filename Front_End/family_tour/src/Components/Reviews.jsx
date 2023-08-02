@@ -20,7 +20,7 @@ return st;
 async function handlesubmit(e)
 { e.preventDefault();
   console.log(name);
-const res=await fetch("http://localhost:5000/review",{
+const res=await fetch("https://tour-management-system-0qjl.onrender.com/review",{
   method:"POST",
   headers:{
     Accept:"application/json",

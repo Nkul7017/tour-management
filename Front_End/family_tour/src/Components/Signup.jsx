@@ -59,7 +59,7 @@ function Login() {
        onSubmit={async(values, { setSubmitting }) => {
          console.log(values);
            try{
-           const {data}= await axios.post("http://localhost:5000/signup",values)
+           const {data}= await axios.post("https://tour-management-system-0qjl.onrender.com/signup",values)
           if(data==="ok")
           {
             navigate('/Login/Successfully signed up');

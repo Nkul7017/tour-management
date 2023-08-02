@@ -33,7 +33,7 @@ const Booking = () => {
   const navigate=useNavigate();
   const get=async()=>{
     try{
-const res=await fetch("http://localhost:5000/booking",{
+const res=await fetch("https://tour-management-system-0qjl.onrender.com/booking",{
   method:"POST",
   headers:{
     Accept:"application/json",

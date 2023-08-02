@@ -27,7 +27,7 @@ const ParticularDestination = () => {
   const { _id } = useParams();
   const get = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/Destination/${_id}`);
+      const response = await axios.get(`https://tour-management-system-0qjl.onrender.com/Destination/${_id}`);
       console.log(response.data);
       setDatas([response.data]);
     } catch (error) {

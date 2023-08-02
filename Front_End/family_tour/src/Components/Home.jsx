@@ -15,7 +15,7 @@ function Home() {
   const [datas, setDatas] = useState([]);
     const get = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/Destination`);
+        const response = await axios.get(`https://tour-management-system-0qjl.onrender.com/Destination`);
         console.log(response.data);
         setDatas(response.data);
       } catch (error) {

@@ -59,7 +59,7 @@ function ForgetPassword() {
          validationSchema={FormSchema}
          onSubmit={async(values, { setSubmitting }) => {
              try{
-              const {data}=await axios.post("http://localhost:5000/forget",values);
+              const {data}=await axios.post("https://tour-management-system-0qjl.onrender.com/forget",values);
               if(data=="ok")
               {
                 navigate('/login/Password Changed')

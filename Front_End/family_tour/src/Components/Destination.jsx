@@ -15,7 +15,7 @@ const Destination = () => {
   const matchingData = [];
   const [search,setSearch]=useState("");
  const get= async()=>{
- const {data}=await axios.get("http://localhost:5000/Destination");
+ const {data}=await axios.get("https://tour-management-system-0qjl.onrender.com/Destination");
  setDatas(data);
  setDatas2(data);
   }

@@ -5,7 +5,7 @@ function Header({display}) {
  const navigate=useNavigate()
   const get=async()=>{
     try{
-const res=await fetch("http://localhost:5000/header",{
+const res=await fetch("https://tour-management-system-0qjl.onrender.com/header",{
   method:"GET",
   headers:{
     Accept:"application/json",
@@ -30,7 +30,7 @@ console.log(res);
   async function handlelogout()
   {
     try{
-      const res=await fetch("http://localhost:5000/logout",{
+      const res=await fetch("https://tour-management-system-0qjl.onrender.com/logout",{
         method:"GET",
         headers:{
           Accept:"application/json",
