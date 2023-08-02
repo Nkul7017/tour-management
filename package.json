@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd Backend && npm install && cd ../Front End/family tour && npm install && npm run build",
+    "build": "cd Backend && npm install && cd ../Front End/family_tour && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Backend/app.js"
   },
