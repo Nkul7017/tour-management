@@ -1,0 +1,31 @@
+const mongoose=require('mongoose')
+const PackageSchema=new mongoose.Schema({
+package_name:{
+    type:String,
+    required:true,
+    unique:true
+},
+description:{
+    type:String,
+    required:true
+},
+duration:{
+    type:Number,
+    required:true
+},
+price:{
+    type:Number,
+    required:true
+},
+destination:{
+    type:Array
+},
+reviews:{
+type:Array
+},
+image:{
+    type:[String],
+    required:true
+}
+})
+module.exports=mongoose.model("Package",PackageSchema)

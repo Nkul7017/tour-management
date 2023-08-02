@@ -1,0 +1,36 @@
+const mongoose=require('mongoose')
+const DestinationSchema=new mongoose.Schema({
+place_name:{
+    type:String,
+    required:true,
+    unique:true
+},
+state:{
+    type:String,
+    required:true
+},
+city:{
+    type:String,
+    required:true
+},
+description:{
+    type:String,
+    required:true
+},
+price:{
+    type:Number,
+    required:true
+},
+duration:{
+  type:Number,
+  required:true
+},
+reviews:{
+    type:Array
+},
+image:{
+    type:[String],
+    required:true
+}
+})
+module.exports=mongoose.model("Destination",DestinationSchema);
