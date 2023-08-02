@@ -5,11 +5,17 @@ const express=require('express')
 const cookieParser = require('cookie-parser');
 const app=express();
 app.use(cookieParser());
-app.use(cors({
-  origin: ['https://tour-management-system-0qjl.onrender.com'],
-  methods:["POST","GET"],
-  credentials: true,
-  }));
+// app.use(cors({
+//   origin: ['https://tour-management-system-0qjl.onrender.com'],
+//   methods:["POST","GET"],
+//   credentials: true,
+//   }));
+  app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
 app.use(express.json());   
 const port=process.env.PORT||5000;
 const DesRouter=require('./Router/DestinationRouter')
