@@ -1,0 +1,13 @@
+{
+  "name": "tour-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd Backend && npm install && cd ../Frontend && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Backend/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
