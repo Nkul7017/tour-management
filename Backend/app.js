@@ -6,7 +6,8 @@ const cookieParser = require('cookie-parser');
 const app=express();
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://tour-management-system-0qjl.onrender.com',
+  origin: ['https://tour-management-system-0qjl.onrender.com'],
+  methods:["POST","GET"],
   credentials: true,
   }));
 app.use(express.json());   
