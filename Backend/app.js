@@ -9,6 +9,12 @@ app.use(cookieParser());
     res.setHeader('Access-Control-Allow-Origin', 'https://tour-management-j313.onrender.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Credentials', 'true');
+
+    if (req.method === 'OPTIONS') {
+      return res.status(204).end();
+    }  
+
     next();
   });
 
