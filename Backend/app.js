@@ -6,11 +6,11 @@ const cookieParser = require('cookie-parser');
 const app=express();
 app.use(cookieParser());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://tour-management-system-0qjl.onrender.com',
   credentials: true,
   }));
 app.use(express.json());   
-const port=process.env.PORT;
+const port=process.env.PORT||5000;
 const DesRouter=require('./Router/DestinationRouter')
 const PacRouter=require('./Router/PackagesRouter')
 const LoginRouter=require('./Router/LoginRouter')
