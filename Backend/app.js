@@ -6,12 +6,12 @@ const app=express();
 app.use(cookieParser());
 
   app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://tour-management-system-0qjl.onrender.com');
+    res.setHeader('Access-Control-Allow-Origin', 'https://tour-management-j313.onrender.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
   });
-  
+
 app.use(express.json());   
 const port=process.env.PORT||5000;
 const DesRouter=require('./Router/DestinationRouter')
